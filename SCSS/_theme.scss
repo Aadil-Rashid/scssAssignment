@@ -1,0 +1,82 @@
+// it will hold fonts, colors, color of buttons
+
+$grid-color: #eabe2e;
+$nav-color: #262626;
+$white: #ffffff;
+$plaque-background: rgba(228, 228, 231, 0.3);
+
+header {
+    width: 100vw;
+    height: 150vh;
+    color: white;
+    background:
+        linear-gradient(
+            to right,
+            rgba($nav-color, 0.9),
+            rgba($nav-color, 0.3),
+        ),
+        url('../img/photo.jpg') center top;
+        background-size: cover;
+}
+
+.nav {
+    color: $white;
+    width: 100vw;
+    height: 110px;
+    background-color: $nav-color;
+    position: fixed;
+}
+
+
+.detail{
+    width: 100vw;
+    height: 83vh;
+}
+
+.helpline {
+    background: $grid-color;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
+}
+
+.eligible{
+    height: 135vh;
+    // border: 2px solid black;
+
+    &__box {
+        margin-top: 15vh;
+        margin-left: 12vw;
+        width: 68vw;
+        height: 38vh;
+        border-radius: 8px;
+        box-shadow: 2px 15px 50px 1.2px rgba(0, 0, 0, 0.2);
+
+        #heading {
+            padding-left: 2vw;
+            height: 9vh;
+            font-size: 30px;
+            border-radius: 8px 8px 0 0;
+            background-color: $nav-color;
+            color: white;
+            display: flex;
+            align-items: center;
+
+            .fade {
+                color: rgba(250, 245, 245, 0.8);
+            }
+        }
+        #content {
+            width: 47vw;
+            padding-top: 3.5vh;
+            padding-left: 2vw;
+            font-size: 1.2em;
+        }
+        .start {
+            padding-top: 5vh;
+            padding-left: 2vw;
+        }
+    }
+}
