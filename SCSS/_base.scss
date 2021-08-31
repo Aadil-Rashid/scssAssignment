@@ -1,43 +1,28 @@
-// it will hold general styles 
-// e.g resets,  it holds basic styles of every element we have on the webpage
+// it will hold general styles
+// element Selector, descendent selector, child selector,
+// it doesnot include any id/class selector
+// e.g resets, It is defining the default styling for how that element should look in all occurrences on the page.
 
-
+// e.g; heading sizes, default links, default fonts, and bodybackgrounds...
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'bignoodletitling', sans-serif;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "bignoodletitling", sans-serif;
 }
-
 
 h2 {
   font-size: 2.5em;
 }
 
-@mixin btnMixin {
-    font-size: 1.2em;
-    margin-left: 25px;
-    border-radius: 7px;
-    padding: 10px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-}
-
-
-
 @mixin media-md {
-    @media screen and (min-width: 768px) {
-      @content;
-    }
+  @media screen and (min-width: 768px) {
+    @content;
   }
-  @mixin media-lg {
-    @media screen and (min-width: 1024px) {
-      @content;
-    }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
   }
-   
+}

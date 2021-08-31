@@ -1,2 +1,19 @@
+// The major components(header, footer)
+// use id selectors
 // it will hold any style or rule that will help to position various elements on the page
-// 
+ 
+header {
+  width: 100vw;
+  height: 150vh;
+}
+
+.footer {
+  height: 65vh;
+  padding-top: 10vh;
+  padding-left: 15vw;
+
+  &__items {
+    margin-top: 8vh;
+    width: 70vw;
+  }
+}

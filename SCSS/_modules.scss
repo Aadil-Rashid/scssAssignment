@@ -1,2 +1,86 @@
-// it will hold reusable, part of the website
-// example;  buttons, forms, tables, lists etc..
+// In modules stick to the class selectors only..
+// example;  navbars, carousels, dialogs, widgets,  etc..
+// avoid using id's and element selectors
+
+.nav {
+  width: 100vw;
+  height: 110px;
+  position: fixed;
+}
+
+.detail {
+  width: 100vw;
+  height: 83vh;
+}
+
+.helpline {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3em;
+}
+
+.eligible {
+  height: 135vh;
+
+  &__box {
+    margin-top: 15vh;
+    margin-left: 12vw;
+    width: 68vw;
+    height: 38vh;
+    border-radius: 8px;
+
+    #heading {
+      padding-left: 2vw;
+      height: 9vh;
+      font-size: 30px;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      align-items: center;
+
+      .fade {
+        color: rgba(250, 245, 245, 0.8);
+      }
+    }
+    #content {
+      width: 47vw;
+      padding-top: 3.5vh;
+      padding-left: 2vw;
+      font-size: 1.2em;
+    }
+    .start {
+      padding-top: 5vh;
+      padding-left: 2vw;
+    }
+  }
+}
+
+.plaque {
+  height: 90vh;
+  padding-top: 12vh;
+
+  &__items {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: 430px;
+
+    &__item {
+      padding: 2vw;
+    }
+  }
+}
+
+@mixin btnMixin {
+  font-size: 1.2em;
+  margin-left: 25px;
+  border-radius: 7px;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}

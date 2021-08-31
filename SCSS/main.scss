@@ -1,316 +1,285 @@
-@import 'base';
-@import 'layout';
-@import 'modules';
-@import 'theme';
-@import 'modules';
-
-
-
+@import "base";
+@import "layout";
+@import "modules";
+@import "theme";
+@import "modules";
 
 .nav {
-    display: flex;
-    overflow: hidden;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 2;
-    color: $white;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+  color: $white;
 
-    &__logo{
-        font-size: 45px;
-        letter-spacing: 2px;    
-        
-        a {
-            color: #fff;
-        }
+  &__logo {
+    font-size: 45px;
+    letter-spacing: 2px;
+
+    a {
+      color: #fff;
     }
+  }
 
-    &__items{
-        // padding-left: 150px;
-        display: flex;
-        font-size: 1.2em;
+  &__items {
+    // padding-left: 150px;
+    display: flex;
+    font-size: 1.2em;
 
     &__item {
-        @include btnMixin;
+      @include btnMixin;
+      a {
+        color: #fff;
+      }
+
+      &:hover {
+        background-color: #fff;
         a {
-            color: #fff;
+          color: rgb(0, 0, 0);
         }
-        
-        &:hover {
-            background-color: #fff;
-            a {
-                color:rgb(0, 0, 0);
-            }
-        } 
-        
-        
+      }
     }
 
     &__over {
-        @include btnMixin;
-        background: $grid-color;
-        padding: 25px;
-        
+      @include btnMixin;
+      background: $grid-color;
+      padding: 25px;
+
+      a {
+        color: black;
+      }
+      &:hover {
+        background: inherit;
         a {
-            color: black;
+          color: $grid-color;
         }
-        &:hover {
-            background: inherit;
-            a {
-                color: $grid-color;
-            }
-        }
+      }
     }
+  }
 
-    }
-
-    a {
-        text-decoration: none;
-        // color: #ffffff;
-    }
+  a {
+    text-decoration: none;
+    // color: #ffffff;
+  }
 }
 
 .active::after {
-    content: '';
-    width: 2%;
-    height: 2px;
-    background-color: #fff;
-    position: absolute; 
-    bottom: 23%; 
-    
+  content: "";
+  width: 2%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 23%;
 }
 
 .bkg {
-    padding-top: 45vh;
-    padding-left: 10vw;
-    width: 45vw;
-    p {
-       padding: 40px 0px 20px 0px;
-       font-size: 1.5em;
+  padding-top: 45vh;
+  padding-left: 10vw;
+  width: 45vw;
+  p {
+    padding: 40px 0px 20px 0px;
+    font-size: 1.5em;
+  }
+
+  &__links {
+    display: flex;
+    align-items: baseline;
+    font-size: 20px;
+
+    &__button {
+      @include btnMixin;
+      margin-left: 3px;
+      padding: 34px;
+      background: rgba(234, 190, 46, 0.95);
+      color: #000;
+      &:hover {
+        background: rgba(234, 190, 46, 1);
+      }
     }
 
-    &__links {
-        display: flex;
-        align-items: baseline;
-        font-size: 20px;
-
-       &__button {
-        @include btnMixin;
-        margin-left: 3px;
-        padding: 34px;
-        background: rgba(234, 190, 46, 0.95);
+    &__overlay-button {
+      @include btnMixin;
+      padding: 32px;
+      color: $grid-color;
+      border: 2px solid $grid-color;
+      &:hover {
         color: #000;
-        &:hover {
-            background:rgba(234, 190, 46, 1);
-        }
-       }
-
-       &__overlay-button {
-        @include btnMixin;
-        padding: 32px;
-        color: $grid-color;
-        border: 2px solid $grid-color;
-        &:hover {
-            color: #000;
-            background-color: $grid-color;
-        }
-       }
-
-       a {
-           text-decoration: none;
-       }
+        background-color: $grid-color;
+      }
     }
-    
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
-
-
 .detail {
-    overflow: hidden;
-    padding-top: 10vh;
-    padding-left: 15vw;
+  overflow: hidden;
+  padding-top: 10vh;
+  padding-left: 15vw;
 
-    &__ist {
-        height: 30vh;
-    }
+  &__ist {
+    height: 30vh;
+  }
 
-    &__second {
-        width: 66vw;
-       
-        
-        p {
-            padding-top: 5vh;
-            font-size: 23px;
-            line-height: 33px;
-        }
-    }
+  &__second {
+    width: 66vw;
 
-    h3 {
-        font-size: 2em;
+    p {
+      padding-top: 5vh;
+      font-size: 23px;
+      line-height: 33px;
     }
+  }
+
+  h3 {
+    font-size: 2em;
+  }
 }
 
 .start-btn {
-    width: 13vw;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: $grid-color;
-    font-size: 23px;
+  width: 13vw;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: $grid-color;
+  font-size: 23px;
 
-    &:hover {
-        cursor: pointer;
-        background: rgba(234, 190, 46, 0.8);
-        color:rgba(0, 0, 0, 0.8);
-    }
+  &:hover {
+    cursor: pointer;
+    background: rgba(234, 190, 46, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+  }
 }
 
-.eligible__grid{
-     
-    margin-top: 25vh;
-    margin-left: 10vw;
-    width: 72vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 45px;
-    grid-auto-rows: 250px;
+.eligible__grid {
+  margin-top: 25vh;
+  margin-left: 10vw;
+  width: 72vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 45px;
+  grid-auto-rows: 250px;
 
-    &__item {
-        padding-top: 12px;
-        border-radius: 10px;
-        box-shadow: 2px 10px 15px 2px rgba(0, 0, 0, 0.12);
-        padding-left: 2vw;
-        line-height: 40px;
-        font-size: 1.4em;
+  &__item {
+    padding-top: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px 2px rgba(0, 0, 0, 0.12);
+    padding-left: 2vw;
+    line-height: 40px;
+    font-size: 1.4em;
 
-        p {
-            padding-top: 18px;
-        }
+    p {
+      padding-top: 18px;
     }
+  }
 }
 
 .plaque {
-    background: $plaque-background;
-    height: 90vh;
-    padding-top: 12vh;
+  background: $plaque-background;
 
-    &__items {
-        
-        width: 85vw;
-        padding-left: 10vw;
-        padding-top: 9vh;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        grid-gap: 30px;
-        grid-auto-rows: 430px;
-        
+  &__items {
+    padding-left: 10vw;
+    padding-top: 9vh;
 
-        &__item {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 2px 10px 15px 2px rgba(0, 0, 0, 0.12);
-            padding: 2vw;
-            line-height: 30px;
-            font-size: 1.35em;
+    &__item {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 2px 10px 15px 2px rgba(0, 0, 0, 0.12);
+      line-height: 30px;
+      font-size: 1.35em;
 
-            h3 {
-                padding-top: 15px;
-            }
+      h3 {
+        padding-top: 15px;
+      }
 
-            p {
-                padding-top: 20px;
-                padding-bottom: 30px;
-            }
+      p {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
 
-            a{
-               text-decoration: none;
-               color: #000;
-               font-weight: bold;
-               &:hover{
-                   text-decoration: underline;
-               }
-            }
+      a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
         }
+      }
     }
+  }
 
-    h2 {
-        text-align: center;
-    }
+  h2 {
+    text-align: center;
+  }
 }
 
 .journey {
-    height: 85vh;
-    padding-top: 10vh;
-    
+  height: 85vh;
+  padding-top: 10vh;
 
-    &__items {
-    
-        padding-left: 18vw;
-         width: 90vw;
-        &__item {
-             
-            display: flex;
+  &__items {
+    padding-left: 18vw;
+    width: 90vw;
+    &__item {
+      display: flex;
 
-            h2 {
-                font-size: 5em;
-                color: #293241;
-                opacity: 25%;
-            }
-            &__content {
-                padding-top: 15px;
-                padding-left: 1.5vw;
+      h2 {
+        font-size: 5em;
+        color: #293241;
+        opacity: 25%;
+      }
+      &__content {
+        padding-top: 15px;
+        padding-left: 1.5vw;
 
-                p {
-                    font-size: 24px;
-                    padding-bottom: 28px;
-                }
-            }
+        p {
+          font-size: 24px;
+          padding-bottom: 28px;
         }
+      }
     }
+  }
 
-    h1 {
-        text-align: center;
-        font-size: 2.5em;
-        padding-bottom: 2.2em;
-    }
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 2.2em;
+  }
 }
 
-
 .footer {
-    background: $nav-color;
-    color: #ffffff;
-    height: 65vh;
-    padding-top: 10vh;
-    padding-left: 15vw;
+  background: $nav-color;
+  color: #ffffff;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    line-height: 45px;
+    font-size: 1.3em;
+    padding-bottom: 10vh;
 
-    &__items {
-        margin-top: 8vh;
-        width: 70vw;
-        display: flex;
-        justify-content: space-between;
-        line-height: 45px;
-        font-size: 1.3em;
-        padding-bottom: 10vh;
+    #links {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: #fff;
+        text-decoration: none;
 
-        #links {
-            display: flex;
-            flex-direction: column;
-            a {
-                color: #fff;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }                
-            }
+        &:hover {
+          text-decoration: underline;
         }
-
-        #social {
-            display: flex;
-            flex-direction: column;
-            a { color: white;
-            }
-        }
+      }
     }
+
+    #social {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+      }
+    }
+  }
 }
